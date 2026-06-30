@@ -1,3 +1,7 @@
+[build-system]
+requires = ["flit_core>=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
 [project]
 name = "propms"
 version = "1.7.0"
@@ -6,21 +10,13 @@ authors = [
     { name = "Aakvatech", email = "info@aakvatech.com" },
 ]
 readme = "README.md"
-license = "GPL-3.0-or-later"
+license = { text = "GPL-3.0-or-later" }
 requires-python = ">=3.10"
-dynamic = ["dependencies"]
-
-# These dependencies are provided by the Frappe bench environment and are
-# intentionally not pinned/installed via pip. Listed here for reference.
-# Runtime requirements (from requirements.txt): frappe, erpnext, csf_tz
+dependencies = []
 
 [project.urls]
 Homepage = "https://aakvatech.com"
 Repository = "https://github.com/aakvatech/PropMS"
-
-[build-system]
-requires = ["flit_core >=3.4,<4"]
-build-backend = "flit_core.buildapi"
 
 [tool.flit.module]
 name = "propms"
